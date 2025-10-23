@@ -1,22 +1,25 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 import './index.css';
 import Button from "./components/Button";
+import Header from "./components/Header";
+import Card from "./components/Card";
+import Footer from "./components/Footer";
 
 function App() {
+  const [transactions, setTransactions] = useState([]);
+
+  const handleClearAll = () => {
+    if (window.confirm("This will remove all transactions. Continue?")) setTransactions([]);
+  }
   return (
     <div className="app-root">
-      <header className="app-header" style={{ background: "#fff", borderBottom: `1px solid var(--border)` }}>
-        <div className="container row-spread">
-          <h1 style={{ margin: 0 }}> Expense Tracker</h1>
-        </div>
-        <div className="row">
-          <Button variant="ghost">Placeholder</Button>
-        </div>
-      </header>
-
+      <Header onClearAll={handleClearAll} />
       <main className="container">
-        <p>TEST CONTAINER</p>
+        <Card title="Welcome">
+          <p>Adding Features</p>
+        </Card>
       </main>
+      <Footer />
     </div>
   );
 }
