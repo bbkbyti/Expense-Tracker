@@ -1,0 +1,29 @@
+.summary {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+  margin-top: 16px;
+}
+@media (min-width: 768px) {
+  .summary {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.summary-card {
+  display: grid;
+  gap: 4px;
+}
+.summary-label {
+  color: var(--muted);
+  font-size: 13px;
+}
+.summary-value {
+  font-size: 24px;
+  font-weight: 800;
+}
+.summary-value.income {
+  color: var(--success);
+}
+.summary-value.expense {
+  color: var(--danger);
+}
