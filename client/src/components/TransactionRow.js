@@ -12,7 +12,7 @@ export default function TransactionRow({ item, onDelete }) {
             <td className={`text-right ${item.kind === "income" ? "t-income" : "t-expense"}`}>
                 {item.kind === "income" ? "+" : "-"}{formatCurrency(item.amount)}
             </td>
-            <td>{item.note || "_"}</td>
+            <td>{item.note || "-"}</td>
             <td className="text-right">
                 <Button variant="danger" onClick={() => onDelete(item.id)}>Delete</Button>
             </td>

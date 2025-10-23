@@ -11,10 +11,10 @@ export default function TransactionList({ items, onDelete }) {
 
     const filtered = useMemo(() => {
         const base = filter === "all" ? items : items.filter((t) => (filter === "income" ? t.kind === "income" : t.kind === "expense"));
-        const ql = q.trim().toLocaleLowerCase();
+        const ql = q.trim().toLowerCase();
         if (!ql) return base;
         return base.filter((t) =>
-            [t.category, t.note, t.date, t.kind, String(t.amount)].some((v) => String(v).toLocaleLowerCase().includes(ql))
+            [t.category, t.note, t.date, t.kind, String(t.amount)].some((v) => String(v).toLowerCase().includes(ql))
         );
     }, [items, filter, q]);
     return (

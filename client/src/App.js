@@ -17,7 +17,7 @@ function App() {
 
   const totals = useMemo(() => {
     const income = transactions.filter(t => t.kind === "income").reduce((s, t) => s + (t.amount || 0), 0);
-    const expense = transactions.filter(t => t.kind === " expense").reduce((s, t) => s + (t.amount || 0), 0);
+    const expense = transactions.filter(t => t.kind === "expense").reduce((s, t) => s + (t.amount || 0), 0);
     return { income, expense, balance: income - expense };
   }, [transactions])
 
