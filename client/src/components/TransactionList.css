@@ -1,0 +1,28 @@
+.tx-list {
+  display: grid;
+  gap: 12px;
+}
+.tx-list-controls {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.table-wrap {
+  overflow-x: auto;
+}
+.tx-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.tx-table th,
+.tx-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  white-space: nowrap;
+}
+.tx-table th.text-right,
+.tx-table td.text-right {
+  text-align: right;
+}

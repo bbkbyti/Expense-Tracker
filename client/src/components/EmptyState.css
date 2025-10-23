@@ -1,0 +1,13 @@
+.empty {
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  color: var(--muted);
+}
+.empty-icon {
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+.empty-text {
+  margin: 0;
+}

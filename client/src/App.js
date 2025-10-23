@@ -7,6 +7,8 @@ import Footer from "./components/Footer";
 import Summary from "./components/Summary";
 import TransactionForm from "./components/TransactionForm";
 import useLocalStorage from "./hooks/useLocalStorage";
+import TransactionList from "./components/TransactionList";
+import EmptyState from "./components/EmptyState";
 
 const LS_KEY = "et_transactions_v1";
 
@@ -37,7 +39,11 @@ function App() {
           </section>
           <section className="right">
             <Card title="Transactions">
-              <p>Listing transactions in next step!</p>
+              {transactions.length === 0 ? (
+                <EmptyState message="No Transaction yet. Add one to get started." />
+              ) : (
+                <TransactionList items={transactions} onDelete={(id) => setTransactions(prev => prev.filter(t => t.id !== id))} />
+              )}
             </Card>
           </section>
         </div>

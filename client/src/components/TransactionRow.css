@@ -1,0 +1,25 @@
+.pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid transparent;
+}
+.pill-income {
+  background: #ecfdf5;
+  color: #065f46;
+  border-color: #a7f3d0;
+}
+.pill-expense {
+  background: #fff1f2;
+  color: #9f1239;
+  border-color: #fecdd3;
+}
+.t-income {
+  color: var(--success);
+}
+.t-expense {
+  color: var(--danger);
+}
