@@ -20,6 +20,19 @@ A simple and responsive **Expense Tracker App** built with **React** that allows
 ✅ Built with clean, reusable React components  
 
 ---
+Expense-Tracker/
+├── client/
+│   ├── src/
+│   │   ├── components/     # Reusable UI components
+│   │   ├── hooks/          # Custom hooks (e.g., useLocalStorage)
+│   │   ├── utils/          # Helper functions
+│   │   ├── data/           # Static data (categories)
+│   │   ├── App.js          # Main app component
+│   │   └── index.js        # Entry point
+│   ├── public/
+│   ├── package.json
+│   └── README.md
+└── ...
 
 ## 🛠️ Tech Stack
 
