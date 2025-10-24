@@ -58,7 +58,7 @@ body {
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: 24px;
   margin-top: 16px;
 }
 @media (min-width: 1024px) {

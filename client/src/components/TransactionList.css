@@ -9,6 +9,7 @@
 }
 .table-wrap {
   overflow-x: auto;
+  padding-bottom: 4px;
 }
 .tx-table {
   width: 100%;
